@@ -11,7 +11,9 @@ export class OneComponent implements OnInit {
   constructor(private testService: TestService) {}
 
   ngOnInit() {
-    this.count = this.testService.counter;
+    // this.count = this.testService.counter; //Method1 for to display res by using async pipe
     console.log('coun...', this.count);
+
+    this.testService.counter.subscribe((res: number) => (this.count = res));
   }
 }
