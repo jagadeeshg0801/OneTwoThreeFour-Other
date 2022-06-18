@@ -11,8 +11,8 @@ export class TwoComponent implements OnInit {
   constructor(private testService: TestService) {}
 
   ngOnInit() {
-    this.testService.getCounter().subscribe((res: number) => {
-      console.log('number', (this.count = res * 2));
-    });
+    // this.testService.getCounter().subscribe((res: number) => {
+    //   console.log('number', (this.count = res * 2));
+    // });
   }
 }

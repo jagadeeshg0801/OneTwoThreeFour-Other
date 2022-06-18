@@ -12,7 +12,7 @@ export class TestService {
     this.counter.next(counter);
   }
 
-  getCounter() {
-    return this.counter;
-  }
+  // getCounter() {
+  //   return this.counter;
+  // }
 }

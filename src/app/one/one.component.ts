@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from '../test.service';
-
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-one',
   templateUrl: './one.component.html',
@@ -11,8 +11,7 @@ export class OneComponent implements OnInit {
   constructor(private testService: TestService) {}
 
   ngOnInit() {
-    this.testService.getCounter().subscribe((res: number) => {
-      console.log('number', (this.count = res));
-    });
+    this.count = this.testService.counter;
+    console.log('coun...', this.count);
   }
 }
