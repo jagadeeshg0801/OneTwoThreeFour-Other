@@ -8,9 +8,10 @@ import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { TestService } from './test.service';
 import { OtherComponent } from './other/other.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   declarations: [
     AppComponent,
     HelloComponent,

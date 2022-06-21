@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject } from 'rxjs';
+import { Observable, ReplaySubject, Subject } from 'rxjs';
 import { count } from 'rxjs/operators';
 
 @Injectable()
@@ -8,11 +8,12 @@ export class TestService {
   constructor() {}
 
   setCounter(counter: number) {
-    console.log('counter', this.counter);
-    this.counter.next(counter);
+    this.subject$.next(5);
+    this.subject$.next(11);
   }
+  subject$ = new Subject<number>();
 
-  // getCounter() {
-  //   return this.counter;
-  // }
+  public subscriber1 = this.subject$.subscribe((val) => {
+    console.log('val', val);
+  });
 }
