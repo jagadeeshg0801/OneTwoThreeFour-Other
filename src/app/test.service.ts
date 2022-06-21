@@ -8,6 +8,7 @@ export class TestService {
   constructor() {}
 
   setCounter(counter: number) {
+    this.counter.next(counter);
     this.subject$.next(5);
     this.subject$.next(11);
   }
