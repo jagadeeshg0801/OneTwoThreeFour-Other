@@ -9,6 +9,7 @@ import { TwoComponent } from './two/two.component';
 import { TestService } from './test.service';
 import { OtherComponent } from './other/other.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MultiplierPipe } from './multiplier.pipe';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     OneComponent,
     TwoComponent,
     OtherComponent,
+    MultiplierPipe,
   ],
   bootstrap: [AppComponent],
   providers: [TestService],

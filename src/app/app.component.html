@@ -2,6 +2,14 @@
 <div class="userData">
   <pre>{{ userData | json }}</pre>
 </div>
+<div style="border:2px solid red;padding:10px;">
+  <h2>Multiplier Custom Pipe Implementation Example</h2>
+  <ul>
+    <li *ngFor="let t of tableArray">
+      {{ t | multiplier: tableNumber }}
+    </li>
+  </ul>
+</div>
 <p>Start editing to see some magic happen :)</p>
 <app-one></app-one>
 <app-two></app-two>
