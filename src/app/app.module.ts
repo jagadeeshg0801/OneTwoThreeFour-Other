@@ -10,6 +10,7 @@ import { TestService } from './test.service';
 import { OtherComponent } from './other/other.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MultiplierPipe } from './multiplier.pipe';
+import { HighLightDirective } from './highlight.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
@@ -20,6 +21,7 @@ import { MultiplierPipe } from './multiplier.pipe';
     TwoComponent,
     OtherComponent,
     MultiplierPipe,
+    HighLightDirective,
   ],
   bootstrap: [AppComponent],
   providers: [TestService],
